@@ -24,8 +24,10 @@
     </style>
 </head>
 <body>
-<a style="text-align: center;">Click <button onclick="document.querySelector('iframe').focus()">here</button> to fix keyboard controls if they are not working.</a>
-<script>
+  <div style="text-align: center;">
+    <a style="color: #000000;">Click <button onclick="document.querySelector('iframe').focus()">here</button> to fix keyboard controls if they are not working.</a>
+  </div>
+  <script>
         var url = (new window.URL(window.location.href)).searchParams.get('url');
         if(url){
             var iframe = document.createElement('iframe');
