@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+        body {
+            height: 100vh;
+            margin: 0;
+        }
+        p {
+            font-family: sans-serif;
+            margin: 0;
+            height: 20px;
+            display: inline-block;
+        }
+        a {
+            color: #777511;
+            text-decoration: none;
+        }
+        iframe {
+            height: calc(100vh - 20px);
+            width: 100vw;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+  <div style="text-align: center;">
+    <a style="color: #000000;">Fix Iframe: <button onclick="document.querySelector('iframe').focus()">Click</button></a>
+    <a style="color: #000000;" id="text"> </a>
+  </div>
+  <script>
+        var url = (new window.URL(window.location.href)).searchParams.get('url');
+        if(url){
+            var iframe = document.createElement('iframe');
+            iframe.src = url;
+            document.body.appendChild(iframe);
+        }
+        var text = (new window.URL(window.location.href)).searchParams.get('text');
+        text.innerHTML = text;
+    </script>
+</body>
+</html>
