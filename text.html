@@ -36,7 +36,8 @@
             document.body.appendChild(iframe);
         }
         var text = (new window.URL(window.location.href)).searchParams.get('text');
-        text.innerHTML = text;
+        var message = document.getElementById('text');
+        message.innerHTML = text;
     </script>
 </body>
 </html>
