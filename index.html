@@ -24,9 +24,11 @@
     </style>
 </head>
 <body>
-  <div style="text-align: center;">
-    <a style="color: #000000;">Click <button onclick="document.querySelector('iframe').focus()">here</button> to fix keyboard controls if they are not working.</a>
-  </div>
+        
+    <button style="color: #000000;" onclick="document.querySelector('iframe').focus()">Fix Keyboard Controls</button>
+    <button style="color: #000000;" onclick="document.querySelector('iframe').reload()">Reload</button>
+    <button style="color: #000000;" onclick="location.reload()">Reload2</button>
+
   <script>
         var url = (new window.URL(window.location.href)).searchParams.get('url');
         if(url){
