@@ -27,11 +27,13 @@
         
     <button style="color: #000000;" onclick="document.querySelector('iframe').focus()">Fix Keyboard Controls</button>
     <button style="color: #000000;" onclick="location.reload()">Reload</button>
+    <button style="color: #000000;" onclick="document.getElementById('iframe1').src = document.getElementById('iframe1').src">Reload</button>
 
   <script>
         var url = (new window.URL(window.location.href)).searchParams.get('url');
         if(url){
             var iframe = document.createElement('iframe');
+            iframe.id = "iframe1"
             iframe.src = url;
             document.body.appendChild(iframe);
         }
